@@ -5,24 +5,25 @@ using namespace std;
 
 app::app() {
 
-    cout << "Nombre de tours de la partie : ";
+    Serial.println("Nombre de tours de la partie : ");
     cin >> this->nbrtours;
-    cout << "\n\n";
 
     string nomjoueur;
     int nombrejoueurs;
     int j;
-    cout << "nombre de joueurs : ";
-    cin >> nombrejoueurs;
-    cout << nombrejoueurs << "\n";
+    Serial.println("nombre de joueurs : ");
+    Serial.read(nombrejoueurs);
+    Serial.println(nombrejoueurs);
 
     this->nbjoueurs = nombrejoueurs;
 
 
     for (j = 1; j <= nombrejoueurs; j++) {
-        cout << "nom du joueur " << j << " : ";
-        cin >> nomjoueur;
-        cout << nomjoueur << "\n";
+        Serial.print("nom du joueur);
+        Serial.print(j);
+        Serial.println(" : ");
+        Serial.read(nomjoueur);
+        Serial.println(nomjoueur);
         this->mapartie.tabjoueur.push_back(joueur(j, nomjoueur, 0));
     }
 
@@ -70,5 +71,5 @@ void app::jeu() {
         }
 
     }
-        cout << "fin de la partie";
+        Serial.println("fin de la partie");
 };

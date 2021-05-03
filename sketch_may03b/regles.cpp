@@ -23,26 +23,31 @@ int regles::changerregles(int tableau[4], tour tr, vector<joueur> joueur, int no
 
      if (tr.somme == 6) {
             if (nojoueur != 0) {
-                cout << joueur[nojoueur - 1].nom << " boit une gorg�e \n";
+                Serial.print(joueur[nojoueur - 1].nom); 
+                Serial.println(" boit une gorg�e");
             }
             else {
-                cout << joueur[joueur.size() - 1].nom << " boit une gorg�e \n";
+                Serial.print(joueur[joueur.size() - 1].nom);
+                Serial.println(" boit une gorg�e");
             }
 
       }
 
     if (tr.somme == 8) {
             if (nojoueur != joueur.size()-1) {
-                cout << joueur[nojoueur + 1].nom << " boit une gorg�e \n";
+                Serial.print(joueur[nojoueur + 1].nom);
+                Serial.println(" boit une gorg�e ";;
             }
             else {
-                cout << joueur[0].nom << " boit une gorg�e \n";
+                Serial.print(joueur[0].nom); 
+                Serial.println(" boit une gorg�e ");
             }
         }
     
     if (tr.somme == 9) {
         if (tableau[0] == 1) {
-            cout << joueur[nojoueur].nom << " devient le roi des pouces\n";
+            Serial.print(joueur[nojoueur].nom);
+            Serial.println(" devient le roi des pouces");
 
             etat=2;
         }
@@ -51,7 +56,8 @@ int regles::changerregles(int tableau[4], tour tr, vector<joueur> joueur, int no
 
     if (tr.somme == 10) {
         if (tableau[1] == 1) {
-            cout << joueur[nojoueur].nom << " devient la reine des questions\n";
+            Serial.print(joueur[nojoueur].nom);
+            Serial.println(" devient la reine des questions");
 
             etat=3;
         }
@@ -60,7 +66,8 @@ int regles::changerregles(int tableau[4], tour tr, vector<joueur> joueur, int no
 
     if (tr.somme == 4) {
         if (tableau[2] == 1) {
-            cout << joueur[nojoueur].nom << " devient le freeze\n";
+            Serial.print(joueur[nojoueur].nom);
+           Serial.println(" devient le freeze");
 
             etat=4;
         }
@@ -69,7 +76,8 @@ int regles::changerregles(int tableau[4], tour tr, vector<joueur> joueur, int no
 
     if (tr.somme == 3) {
         if (tableau[3] == 1) {
-            cout << joueur[nojoueur].nom << " devient la noisette\n";
+            Serial.print(joueur[nojoueur].nom);
+            Serial.println(" devient la noisette");
 
             etat=5;
         }
@@ -80,7 +88,8 @@ int regles::changerregles(int tableau[4], tour tr, vector<joueur> joueur, int no
             int i;
             for (i = 0; i < joueur.size(); i++) {
                 if (joueur[i].role == 5) {
-                    cout << joueur[i].nom << " boit trois gorg�es\n";
+                    Serial.print(joueur[i].nom);
+                    Serial.println(" boit trois gorg�es");;
                 }
             }
         }

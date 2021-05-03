@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <math.h>
+#include <ChainableLED.h>
 #include "joueur.h"
 #include "regles.h"
 #include "partie.h"

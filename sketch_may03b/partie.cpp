@@ -17,7 +17,8 @@ void partie::majpartie(tour tr, int joueur) {
     int noregle;
     unsigned int i;
     int noroles;
-    cout << "Au tour de : " << tabjoueur[joueur].nom << "\n";
+    Serial.print("Au tour de : ");
+    Serial.println(tabjoueur[joueur].nom);
     switch (mesregles.changerregles(actif, tr, tabjoueur, joueur)) {
     case 1:
         srand((unsigned int)time(0));
@@ -27,27 +28,27 @@ void partie::majpartie(tour tr, int joueur) {
                 noregle = rand() % 4;
             };
             actif[noregle] = 1;
-            cout << "une nouvelle r�gles apparait : ";
+            Serial.print("une nouvelle r�gles apparait : ");
             switch (noregle) {
             case 0:
-                cout << "le roi des pouces !\n";
+                Serial.println("le roi des pouces !");;
                 break;
             case 1:
-                cout << "la reine des questions !\n";
+                Serial.println("la reine des questions !");
                 break;
             case 2:
-                cout << "le freeze !\n";
+                Serial.println("le freeze !";;
                 break;
 
             case 3:
-                cout << "la noisette !\n";
+                Serial.println("la noisette !");
                 break;
             }
             nbreglesinactives--;
             break;
         }
         else {
-            cout << "pas de r�gles � ajouter\n";
+           Serial.println("pas de r�gles � ajouter");
             break;
         };
         break;
