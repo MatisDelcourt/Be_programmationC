@@ -1,0 +1,3 @@
+﻿  partie.cpp
+C:\Users\odran\Desktop\c++\be\be\partie.cpp(19,9): warning C4101: 'noroles' : variable locale non référencée
+  be.vcxproj -> C:\Users\odran\Desktop\c++\be\Debug\be.exe
